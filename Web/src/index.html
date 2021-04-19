@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="index.js"></script>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="calc-total-wrapper">
+            <h1>Calcular valor</h1>
+            <div>
+                <label for="installments">Parcelas</label>
+                <input type="number" id="installments">
+            </div>
+            <div>
+                <label for="amount">Valor</label>
+                <input type="number" id="amount">
+            </div>
+            <button id="btn-calc-total" onclick="calcTotal()">Calcular</button>
+            <h3 id="resultTotal"></h3>
+        </div>
+        <div>
+            <h1>Busca</h1>
+            <input type="text" id="id">
+            <button id="btn-find-name" onclick="findName()">Buscar</button>
+            <h3 id="resultName"></h3>
+        </div>
+    </body>
+</html>

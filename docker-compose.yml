@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: Web/
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+    networks:
+      - net
+  api:
+    build:
+      context: Api/
+      dockerfile: Dockerfile     
+    ports:
+      - 5000:5000
+    networks:
+      - net
+networks: 
+  net:
+    driver: bridge
